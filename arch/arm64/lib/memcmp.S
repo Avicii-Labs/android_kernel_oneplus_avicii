@@ -48,6 +48,15 @@
 #define data2w		w4
 #define tmp1		x5
 
+/* Small inputs of less than 8 bytes are handled separately.  This allows the
+   main code to be sped up using unaligned loads since there are now at least
+   8 bytes to be compared.  If the first 8 bytes are equal, align src1.
+   This ensures each iteration does at most one unaligned access even if both
+   src1 and src2 are unaligned, and mutually aligned inputs behave as if
+   aligned.  After the main loop, process the last 8 bytes using unaligned
+   accesses.  */
+
+.p2align 6
 WEAK(memcmp)
 	subs	limit, limit, 8
 	b.lo	.Lless8
