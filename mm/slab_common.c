@@ -488,6 +488,9 @@ kmem_cache_create_usercopy(const char *name,
 	    WARN_ON(size < usersize || size - usersize < useroffset))
 		usersize = useroffset = 0;
 
+	/* Embrace davem */
+	flags |= SLAB_HWCACHE_ALIGN;
+
 	if (!usersize)
 		s = __kmem_cache_alias(name, size, align, flags, ctor);
 	if (s)
