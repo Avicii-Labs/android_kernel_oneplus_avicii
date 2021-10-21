@@ -283,6 +283,9 @@ build_kernel() {
 			CROSS_COMPILE_ARM32=arm-eabi- \
 			CROSS_COMPILE=aarch64-elf-
 			LD=aarch64-elf-ld.lld
+			AR=llvm-ar
+			NM=llvm-nm
+			OBJCOPY=llvm-objcopy
 		)
 	fi
 	
