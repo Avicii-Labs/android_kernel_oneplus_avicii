@@ -22,7 +22,7 @@ static unsigned int mode = 0;
 static unsigned int set_mode;
 module_param(mode, uint, 0664);
 
-void kprofiles_set_mode_rollback(unsigned int level, unsigned int duration_ms)
+inline void kprofiles_set_mode_rollback(unsigned int level, unsigned int duration_ms)
 {
 	if (!level || !duration_ms)
 		return;
@@ -32,7 +32,7 @@ void kprofiles_set_mode_rollback(unsigned int level, unsigned int duration_ms)
 	mode = set_mode;
 }
 
-void kprofiles_set_mode(unsigned int level)
+inline void kprofiles_set_mode(unsigned int level)
 {
 	if (!level)
 		return;
@@ -40,7 +40,7 @@ void kprofiles_set_mode(unsigned int level)
 }
 
 #if defined(CONFIG_AUTO_KPROFILES_MSM_DRM) || defined(CONFIG_AUTO_KPROFILES_FB)
-static int common_notifier_callback(struct notifier_block *self,
+static inline int common_notifier_callback(struct notifier_block *self,
 				unsigned long event, void *data)
 {
 #ifdef CONFIG_AUTO_KPROFILES_MSM_DRM
