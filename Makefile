@@ -729,7 +729,7 @@ KBUILD_CFLAGS  += -Werror
 endif
 
 ifeq ($(cc-name),clang)
-KBUILD_CFLAGS	+= -march=armv8.2-a+lse+fp16+dotprod -mcpu=cortex-a55+crypto+crc
+KBUILD_CFLAGS	+= -march=armv8.2-a+lse+fp16+dotprod -mcpu=cortex-a76+crypto+crc
 else
 KBUILD_CFLAGS	+= -march=armv8.2-a+lse+fp16+dotprod -mcpu=cortex-a76.cortex-a55+crypto+crc
 endif
