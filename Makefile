@@ -729,9 +729,9 @@ KBUILD_CFLAGS  += -Werror
 endif
 
 ifeq ($(cc-name),clang)
-KBUILD_CFLAGS	+= -march=armv8.2-a+lse+fp16+dotprod -mcpu=cortex-a76+crypto+crc
+KBUILD_CFLAGS += -march=armv8.2-a+crypto+crc+lse+fp16+dotprod+rcpc+rdm -mtune=cortex-a76
 else
-KBUILD_CFLAGS	+= -march=armv8.2-a+lse+fp16+dotprod -mcpu=cortex-a76.cortex-a55+crypto+crc
+KBUILD_CFLAGS += -mcpu=cortex-a76.cortex-a55+crypto+crc
 endif
 
 # Tell gcc to never replace conditional load with a non-conditional one
