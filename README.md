@@ -4,7 +4,7 @@
 | Parameter | Value |
 | ---------- | ---------- |
 | NS version | 5.1 |
-| Linux Kernel version | 4.19.325-cip135-st19 |
+| Linux Kernel version | 4.19.325-cip136-st20 |
 
 ## Kernel Features
 (1) Supports 5V-6A Fast Charging 
