@@ -7,7 +7,7 @@
 | Linux Kernel version | 4.19.325-cip136-st20 |
 | KernelSU-Next version | 3.4.0 |
 | KernelSU-Next version code | 33294 |
-| SUSFS version | 2.2.0 |
+| SUSFS version | 2.3.0 |
 
 ## Kernel Features
 (1) Supports 5V-6A Fast Charging 
