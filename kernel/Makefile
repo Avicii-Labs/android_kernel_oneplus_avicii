@@ -129,8 +129,19 @@ obj-$(CONFIG_RSEQ) += rseq.o
 
 $(obj)/configs.o: $(obj)/config_data.h
 
+# Hide SYSVIPC from /proc/config.gz so that it passes the Android
+# framework compatibility matrix check, which requires it to be disabled.
+quiet_cmd_ikconfig_filter = GEN     $@
+      cmd_ikconfig_filter = sed -e 's/^CONFIG_SYSVIPC=y$$/\# CONFIG_SYSVIPC is not set/' \
+				-e '/^CONFIG_SYSVIPC_SYSCTL=y$$/d' \
+				-e '/^CONFIG_SYSVIPC_COMPAT=y$$/d' $< > $@
+
+targets += config_data
+$(obj)/config_data: $(KCONFIG_CONFIG) FORCE
+	$(call if_changed,ikconfig_filter)
+
 targets += config_data.gz
-$(obj)/config_data.gz: $(KCONFIG_CONFIG) FORCE
+$(obj)/config_data.gz: $(obj)/config_data FORCE
 	$(call if_changed,gzip)
 
       filechk_ikconfiggz = (echo "static const char kernel_config_data[] __used = MAGIC_START"; cat $< | scripts/bin2c; echo "MAGIC_END;")
