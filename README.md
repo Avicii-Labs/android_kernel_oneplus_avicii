@@ -1,9 +1,9 @@
-# NeverSettle Kernel
+# Nocturne Kernel
 ## Kernel Details
 
 | Parameter | Value |
 | ---------- | ---------- |
-| NS version | 5.1 |
+| Nocturne version | 1.0 |
 | Linux Kernel version | 4.19.325-cip136-st20 |
 | KernelSU-Next version | 3.4.0 |
 | KernelSU-Next version code | 33294 |
@@ -35,6 +35,7 @@
 - [Rifat Azad](https://github.com/rifsxd): For the development of KernelSU-Next
 - [simonpunk](https://gitlab.com/simonpunk): For the development of SUSFS4KSU
 - [osm0sis](https://github.com/osm0sis): For the development of AnyKernel3
+- [Sreeshankar K](https://github.com/sreeshankark): For NeverSettle Kernel, which Nocturne is based on
 
 Linux kernel
 ============

@@ -1,6 +1,6 @@
 # AnyKernel3 Ramdisk Mod Script
 # osm0sis @ xda-developers
-# Advanced NS Kernel Flasher
+# Advanced Nocturne Kernel Flasher
 
 ## AnyKernel setup
 # begin properties

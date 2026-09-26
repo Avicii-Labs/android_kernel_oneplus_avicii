@@ -1,6 +1,6 @@
 ### AnyKernel methods (DO NOT CHANGE)
 ## osm0sis @ xda-developers
-# Advanced NS Kernel Flasher
+# Advanced Nocturne Kernel Flasher
 
 OUTFD=$1;
 

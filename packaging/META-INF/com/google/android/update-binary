@@ -1,7 +1,7 @@
 #!/sbin/sh
 # AnyKernel3 Backend (DO NOT CHANGE)
 # osm0sis @ xda-developers
-# Advanced NS Kernel flasher
+# Advanced Nocturne Kernel flasher
 
 OUTFD=/proc/self/fd/$2;
 ZIPFILE="$3";
@@ -389,7 +389,7 @@ ui_print "|=============================================|";
 sleep 0.033333s;
 dyui_print " ";
 sleep 0.033333s;
-dyui_print "- Advanced NS Kernel Flasher";
+dyui_print "- Advanced Nocturne Kernel Flasher";
 sleep 0.033333s;
 dyui_print "- Based on AnyKernel3 by Chris Renshaw";
 sleep 0.033333s;
@@ -401,7 +401,7 @@ dyui_print " ";
 sleep 0.033333s;
 dyui_print "- Details";
 sleep 0.5s;
-dyui_print "-> NS version: $VERSION_STRING";
+dyui_print "-> Nocturne version: $VERSION_STRING";
 sleep 0.5s;
 dyui_print "-> Linux Kernel: $KERNEL_VERSION";
 sleep 0.5s;
@@ -433,7 +433,7 @@ ui_print "|---------------------------------------------|";
 sleep 0.033333s;
 sleep 1s;
 dyui_print " ";
-dyui_print "- Install NeverSettle Kernel";
+dyui_print "- Install Nocturne Kernel";
 sleep 1s;
 dyui_print "-> Extracting boot.img";
 sleep 2s;
@@ -458,7 +458,7 @@ ui_print "|=============================================|";
 sleep 0.033333s;
 ui_print "|                                             | ";
 sleep 0.033333s;
-ui_print "| - NeverSettle Kernel installation suceeded  |";
+ui_print "| - Nocturne Kernel installation suceeded     |";
 sleep 0.033333s;
 ui_print "|                                             | ";
 sleep 0.033333s;
