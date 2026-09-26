@@ -65,8 +65,6 @@ fi
 KERNEL_VERSION="4.19.325-cip135-st19"
 CLANG_VER="r614150"
 CLANG_VERSION="23.0.1"
-KSU_VERSION="v3.3.0"
-SUSFS_VERSION="v2.2.0"
 BUILD_DATE="$(date +%d-%m-%Y)"
 
 KERNEL_NAME="NeverSettle-Kernel-$VERSION"
@@ -182,8 +180,6 @@ sed -i \
     -e "s/version.string=/version.string=$VERSION/" \
     -e "s/date.string=/date.string=$BUILD_DATE/" \
     -e "s/kernel.version=/kernel.version=$KERNEL_VERSION/" \
-    -e "s/ksu.version=/ksu.version=$KSU_VERSION/" \
-    -e "s/susfs.version=/susfs.version=$SUSFS_VERSION/" \
     -e "s/clang.version=/clang.version=$CLANG_VERSION/" \
     "$STAGING_DIR/anykernel.sh"
 

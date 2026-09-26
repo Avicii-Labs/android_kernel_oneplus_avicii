@@ -371,10 +371,8 @@ fi;
 
 VERSION_STRING="$(file_getprop anykernel.sh version.string)";
 DATE="$(file_getprop anykernel.sh date.string)";
-KSU_VERSION="$(file_getprop anykernel.sh ksu.version)";
 KERNEL_VERSION="$(file_getprop anykernel.sh kernel.version)";
 CLANG_VERSION="$(file_getprop anykernel.sh clang.version)";
-SUSFS_VERSION="$(file_getprop anykernel.sh susfs.version)";
 
 ui_print " ";
 ui_print "|=============================================|";
@@ -406,10 +404,6 @@ sleep 0.5s;
 dyui_print "-> Linux Kernel: $KERNEL_VERSION";
 sleep 0.5s;
 dyui_print "-> Clang version: $CLANG_VERSION";
-sleep 0.5s;
-dyui_print "-> KernelSU-Next version: $KSU_VERSION";
-sleep 0.5s;
-dyui_print "-> SUSFS version: $SUSFS_VERSION";
 sleep 0.5s;
 dyui_print "-> Build date: $DATE";
 sleep 0.5s;
