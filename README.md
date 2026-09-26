@@ -5,8 +5,8 @@
 | ---------- | ---------- |
 | NS version | 5.1 |
 | Linux Kernel version | 4.19.325-cip135-st19 |
-| KernelSU-Next version | 3.3.0 |
-| KernelSU-Next version code | 33292 |
+| KernelSU-Next version | 3.4.0 |
+| KernelSU-Next version code | 33294 |
 | SUSFS version | 2.2.0 |
 
 ## Kernel Features
