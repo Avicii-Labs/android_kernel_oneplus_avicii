@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# NeverSettle Kernel build script
+# Nocturne Kernel build script
 #
 
 set -e
@@ -59,7 +59,7 @@ echo "==> Build log: $LOG_FILE"
 if [ "$BUILDTYPE" = "TEST" ]; then
     VERSION="TEST"
 else
-    VERSION="v5.1"
+    VERSION="v1.0"
 fi
 
 KERNEL_VERSION="4.19.325-cip136-st20"
@@ -67,7 +67,7 @@ CLANG_VER="r614150"
 CLANG_VERSION="23.0.1"
 BUILD_DATE="$(date +%d-%m-%Y)"
 
-KERNEL_NAME="NeverSettle-Kernel-$VERSION"
+KERNEL_NAME="Nocturne-Kernel-$VERSION"
 ZIP_NAME="$KERNEL_NAME-$(date +%d%m%Y-%H%M).zip"
 
 DEFCONFIGS="avicii_defconfig avicii_ext.config"
@@ -124,7 +124,7 @@ sed -i 's/ccflags-y += $(subst $(srctree),source,$(INCS))/ccflags-y += $(INCS)/g
 # -----------------
 
 echo "==============================================="
-echo "  NeverSettle Kernel $VERSION"
+echo "  Nocturne Kernel $VERSION"
 echo "==============================================="
 echo "Kernel:      $KERNEL_VERSION"
 echo "Clang:       $CLANG_VERSION ($CLANG_VER)"
@@ -145,7 +145,7 @@ make -s ARCH=arm64 O="$OUTPUT_DIR" CC="$CC" $DEFCONFIGS
 
 # Set version string on the generated config instead of editing the tracked defconfig
 scripts/config --file "$OUTPUT_DIR/.config" \
-    --set-str LOCALVERSION "-NeverSettle-Kernel-$VERSION" \
+    --set-str LOCALVERSION "-Nocturne-Kernel-$VERSION" \
     --disable LOCALVERSION_AUTO
 make -s ARCH=arm64 O="$OUTPUT_DIR" CC="$CC" olddefconfig
 

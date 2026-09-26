@@ -1,9 +1,9 @@
-# NeverSettle Kernel
+# Nocturne Kernel
 ## Kernel Details
 
 | Parameter | Value |
 | ---------- | ---------- |
-| NS version | 5.1 |
+| Nocturne version | 1.0 |
 | Linux Kernel version | 4.19.325-cip136-st20 |
 
 ## Kernel Features
@@ -27,6 +27,7 @@
 
 - [Linux Kernel Organisation](https://kernel.org): For the development of base kernel
 - [osm0sis](https://github.com/osm0sis): For the development of AnyKernel3
+- [Sreeshankar K](https://github.com/sreeshankark): For NeverSettle Kernel, which Nocturne is based on
 
 Linux kernel
 ============
